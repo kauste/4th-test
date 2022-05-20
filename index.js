@@ -28,6 +28,11 @@ function changeRand(){
             h2DOM[i].style.color = 'red';
         }
     }
+    else {
+        for (i = 0; i < h2DOM.length; i++){
+            h2DOM[i].style.color = 'black';
+        }
+    }
 }
 
 buttonDOM.addEventListener('click', changeRand);
@@ -74,18 +79,18 @@ for(let i = 0; i < africa.length; i++){
 // 4 uzduotis
 
 // 5 uzduotis
-
+let australiaList = ``;
 ul2DOM = document.querySelector('.ul2');
 for(let i = 0; i < australia.length; i++){
     console.log(australia[i]);
     let australiaElement = document.createElement('li');
-        let australiaList = ``;
         australiaElement.innerHTML = `${australia[i]}`;
         console.log(australiaElement);
         australiaList += `${australiaElement}`;
         ul2DOM.innerHTML += `${australia[i]} `;
 }
 
+console.log(australiaList)
 
 
 

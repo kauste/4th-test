@@ -1,4 +1,4 @@
-//const africa = ['Zebras', 'Liūtas',  '', 'Raganosis', '','Raganosis', 'Begemotas'];
+const africa = ['Zebras', 'Liūtas',  '', 'Raganosis', '','Raganosis', 'Begemotas'];
 const australia = ['Kengūra', 'Ančiasnapis', 'Dingo', 'Atsirado', 'Strutis'];
 
 function rand(min, max) {
@@ -61,13 +61,32 @@ button2DOM.addEventListener('click', sumH3);
 // 3 uzduotis
 ulDOM = document.querySelector('ul');
 
+for(let i = 0; i < africa.length; i++){
+    console.log(africa[i]);
+    let africaList = document.createElement('li');
+    if(africa[i] !== '') {
+        africaList.innerHTML = `${africa[i]}`;
+        console.log(africaList);
+        ulDOM.appendChild(africaList);
+    }
+}
+
+// 4 uzduotis
+
+// 5 uzduotis
+
+ul2DOM = document.querySelector('.ul2');
 for(let i = 0; i < australia.length; i++){
     console.log(australia[i]);
-    let australiaList = document.createElement('li');
-        australiaList.innerHTML = `${australia[i]}`;
-    console.log(australiaList);
-    ulDOM.innerHTML += australiaList.innerHTML;
+    let australiaElement = document.createElement('li');
+        let australiaList = ``;
+        australiaElement.innerHTML = `${australia[i]}`;
+        console.log(australiaElement);
+        australiaList += `${australiaElement}`;
+        ul2DOM.innerHTML += `${australia[i]} `;
 }
+
+
 
 
 

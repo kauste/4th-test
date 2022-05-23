@@ -100,19 +100,21 @@ function minus () {
     }
 }
 minusBtnDOM.addEventListener('click', minus);
+
 // 5 uzduotis
 let australiaList = ``;
 ul2DOM = document.querySelector('.ul2');
 for(let i = 0; i < australia.length; i++){
-    console.log(australia[i]);
-    let australiaElement = document.createElement('li');
-        australiaElement.innerHTML = `${australia[i]}`;
-        console.log(australiaElement);
-        australiaList += `${australiaElement}`;
-        ul2DOM.innerHTML += `${australia[i]} `;
+    if(i == 2){
+        australiaElement = `<li style="background-color:blue">${australia[i]}</li>`; 
+    } else {
+        australiaElement =  `<li>${australia[i]}</li>`; 
+    }
+        australiaList += australiaElement;
 }
+ul2DOM.innerHTML = australiaList;
 
-console.log(australiaList)
+
 
 
 

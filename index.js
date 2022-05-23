@@ -76,8 +76,30 @@ for(let i = 0; i < africa.length; i++){
     }
 }
 
-// 4 uzduotis
+// 4 uzduoti
+firstInputDOM = document.querySelector('.first-input');
+secondInputDOM = document.querySelector('.second-input');
+plusBtnDOM = document.querySelector('.plus-btn');
+minusBtnDOM = document.querySelector('.minus-btn');
+h5DOM = document.querySelector('h5');
 
+function plus(){
+    if(firstInputDOM.value === '' || secondInputDOM.value === ''){
+        h5DOM.innerText = 'Vienas ar abu is skaiciu yra neivesti.'
+    } else {
+        h5DOM.innerText = parseInt(firstInputDOM.value) + parseInt(secondInputDOM.value);
+    }
+}
+plusBtnDOM.addEventListener('click', plus);
+
+function minus () {
+    if(firstInputDOM.value === '' || secondInputDOM.value === ''){
+        h5DOM.innerText = 'Vienas ar abu is skaiciu yra neivesti.'
+    } else {
+        h5DOM.innerText = parseInt(firstInputDOM.value) - parseInt(secondInputDOM.value);
+    }
+}
+minusBtnDOM.addEventListener('click', minus);
 // 5 uzduotis
 let australiaList = ``;
 ul2DOM = document.querySelector('.ul2');
